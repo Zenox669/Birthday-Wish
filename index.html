@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, My Love!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+    .container {
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+      z-index: 2;
+    }
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+      animation: bounce 1s infinite alternate;
+    }
+    h2 {
+      font-weight: normal;
+      font-size: 1.8em;
+      margin-bottom: 30px;
+      animation: fadeIn 3s forwards;
+    }
+    p {
+      font-size: 1.3em;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      animation: fadeIn 4s forwards;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #fff;
+      color: #ff69b4;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: all 0.3s;
+      animation: glow 2s infinite alternate;
+    }
+    .btn:hover {
+      background: #ffe4ec;
+      color: #d6006c;
+    }
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-20px); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px #fff; }
+      100% { box-shadow: 0 0 30px #fff; }
+    }
+
+    /* Confetti animation */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: white;
+      opacity: 0.8;
+      top: -10px;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Happy Birthday, Shorna🥳! 🎂</h1>
+    <h2>To the most beautiful girl in my world</h2>
+    <p>
+      On this special day, I just want you to know how incredibly grateful I am to have you in my life. You fill my days with laughter, love, and endless joy.
+
+You’re not just my girlfriend — you’re my best friend, my partner, and my sunshine. I hope this birthday brings you as much happiness as you’ve brought into my world.
+
+May all your dreams come true, today and always. I love you more than words can say
+
+    </p>
+    <a href="#" class="btn">Click for a Surprise!</a>
+  </div>
+
+  <script>
+    // Create confetti
+    const colors = ['#fff', '#ff69b4', '#ffe4ec', '#ffc107', '#ff4081'];
+    for (let i = 0; i < 100; i++) {
+      let confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.left = Math.random() * window.innerWidth + 'px';
+      confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.animationDuration = (3 + Math.random() * 5) + 's';
+      confetti.style.width = confetti.style.height = (5 + Math.random() * 10) + 'px';
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>
